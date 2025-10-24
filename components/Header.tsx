@@ -13,7 +13,7 @@ const Header = async ({ user }: { user: User }) => {
         <Link href="/">
           <Image
             src="/assets/icons/logo.png"
-            alt="Signalist logo"
+            alt="Trade For You logo"
             width={140}
             height={32}
             className="h-8 w-auto cursor-pointer"

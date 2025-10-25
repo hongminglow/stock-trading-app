@@ -38,7 +38,14 @@ const SignUp = () => {
   const onSubmit = async (data: SignUpFormData) => {
     try {
       const result = await signUpWithEmail(data);
-      if (result.success) router.push("/");
+      if (result.success) {
+        router.push("/");
+        return;
+      }
+
+      toast.error("Sign up failed", {
+        description: "Please check your input details and try again.",
+      });
     } catch (e) {
       console.error(e);
       toast.error("Sign up failed", {
@@ -126,7 +133,7 @@ const SignUp = () => {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="yellow-btn w-full mt-5"
+          className="blue-gradient-btn w-full mt-5"
         >
           {isSubmitting ? "Creating Account" : "Start Your Investing Journey"}
         </Button>

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
-// @ts-expect-error Next.js handles global CSS imports at runtime.
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +17,13 @@ export const metadata: Metadata = {
   title: "Trade For You",
   description:
     "An innovative stock trading platform that seeks to surpass Trading View in the future.",
+  keywords: [
+    "stock trading",
+    "financial news",
+    "trading view",
+    "investment tools",
+    "crypto",
+  ],
 };
 
 export default function RootLayout({
